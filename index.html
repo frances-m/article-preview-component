@@ -4,33 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="icon" type="image/png" sizes="32x32" href=".resources/images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="./resources/css/adjust.css" />
+  <link rel="stylesheet" type="text/css" href="./resources/css/main.css" />
+
   <title>Frontend Mentor | Article preview component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <main>
+    <article class="card">
+      <img class="card-img" alt="" src="./resources/images/drawers.jpg" />
+      <div class="card-content">
+        <section class="card-text">
+          <h1>Shift the overall look and feel by adding these wonderful
+            touches to furniture in your home</h1>
+          <p>Ever been in a room and felt like something was missing? Perhaps
+            it felt slightly bare and uninviting. I’ve got some simple tips
+            to help you make any room feel complete.</p>
+        </section>
+        <div class="card-author">
+          <img id="author-img" alt="" src="avatar-michelle.jpg" />
+          <div id="author-info">
+            <strong>Michelle Appleton</strong>
+            <p>28 Jun 2020</p>
+          </div>
+          <div id="share-container">
+            <button id="share-button" type="button">
+              <img id="share-img" alt="share" src="./resources/images/icon-share.svg" />
+            </button>
+            <div id="share-menu">
+              <p>Share</p>
+              <button type="button">
+                <img alt="share to facebook" src="./resources/images/icon-facebook.svg" />
+              </button>
+              <button type="button">
+                <img alt="share to twitter" src="./resources/images/icon-twitter.svg" />
+              </button>
+              <button type="button">
+                <img alt="share to pinterest" src="./resources/images/icon-pinterest.svg" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home
+    </article>
+  </main>
 
-  Ever been in a room and felt like something was missing? Perhaps 
-  it felt slightly bare and uninviting. I’ve got some simple tips 
-  to help you make any room feel complete.
-
-  Michelle Appleton
-  28 Jun 2020
-
-  Share
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Frances McKenzie</a>.
+  </footer>
 </body>
 </html>
