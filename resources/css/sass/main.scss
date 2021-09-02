@@ -2,14 +2,45 @@
 @import "util/variables";
 @import "util/placeholders";
 
+html {
+  font-size: 62.5%;
+}
+
 body {
-  font-size: 13px;
+  font-size: 1.3rem;
+  background-color: $lighter-gray-blue;
 }
 
 #share-menu {
   display: none;
 }
 
-#active {
+.active {
   filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(13%) hue-rotate(237deg) brightness(104%) contrast(104%);
+}
+
+main {
+  padding-top: 8rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20rem 20rem;
+  width: 35rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+  background-color: #FFF;
+
+  #card-img {
+    grid-column: 1;
+    grid-row: 1;
+    border-radius: 1rem 1rem 0 0;
+    background-image: url(./images/drawers.jpg);
+  }
+
+  #card-content {
+    grid-column: 1;
+    grid-row: 2;
+  }
 }
