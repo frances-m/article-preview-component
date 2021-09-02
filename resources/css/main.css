@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
-.attribution, #share-container #share-menu p, #card-author #author-info p, #card-content p {
+.attribution, #share-container .share-menu p, #card-author #author-info p, #card-content p {
   font-family: "manrope", sans-serif;
   font-weight: 500;
 }
@@ -16,10 +16,6 @@ html {
 body {
   font-size: 1.3rem;
   background-color: #ecf2f8;
-}
-
-.active {
-  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(13%) hue-rotate(237deg) brightness(104%) contrast(104%);
 }
 
 main {
@@ -104,7 +100,7 @@ main {
   height: 3.1rem;
   border: none;
 }
-#share-container #share-menu {
+#share-container .share-menu {
   display: flex;
   align-items: center;
   visibility: hidden;
@@ -114,7 +110,7 @@ main {
   width: 32.5rem;
   position: absolute;
 }
-#share-container #share-menu p {
+#share-container .share-menu p {
   letter-spacing: 0.5rem;
   text-transform: uppercase;
   margin: 0;
@@ -122,11 +118,11 @@ main {
   padding-left: 3rem;
   color: #9eafc2;
 }
-#share-container #share-menu button {
+#share-container .share-menu button {
   background-color: inherit;
   margin: 0 0.4rem;
 }
-#share-container #share-button {
+#share-container .share-button {
   margin-right: 3.2rem;
   background-color: #ecf2f8;
   border-radius: 100%;
@@ -145,6 +141,17 @@ main {
   color: #48556a;
 }
 
+.active #share-menu {
+  visibility: visible;
+}
+.active #share-button {
+  background-color: #6d7f97;
+}
+.active #share-button img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(13%) hue-rotate(237deg) brightness(104%) contrast(104%);
+}
+
+/* MEDIA QUERIES */
 @media screen and (max-width: 340px) {
   main {
     padding-top: 5vh;
@@ -160,6 +167,81 @@ main {
   }
   #card-content p {
     font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  main {
+    padding-top: 0;
+  }
+
+  .card {
+    grid-template-columns: 28.5rem 45rem;
+    grid-template-rows: 28rem;
+    max-width: none;
+    width: min-content;
+  }
+  .card #card-img {
+    border-radius: 1rem 0 0 1rem;
+    background-position: left;
+  }
+
+  #card-content {
+    grid-column: 2;
+    grid-row: 1;
+    width: 83%;
+    margin-left: 4.2rem;
+    padding-top: 3rem;
+  }
+  #card-content h1 {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+  #card-content p {
+    margin-bottom: 2rem;
+  }
+
+  #share-container {
+    left: 5.9rem;
+  }
+  #share-container .social-button {
+    height: 4rem;
+  }
+  #share-container .social-button img {
+    height: 2.2rem;
+  }
+  #share-container .share-menu {
+    border-radius: 1rem;
+    height: 5.5rem;
+    width: 26rem;
+    top: -7.5rem;
+    left: 16.2rem;
+    box-shadow: 0 1rem 1rem #ecf2f8;
+  }
+  #share-container .share-menu p {
+    font-size: 1.4rem;
+  }
+  #share-container .share-menu::after {
+    content: ">>>";
+    font-size: 5rem;
+    letter-spacing: -3.9rem;
+    font-family: "manrope", sans-serif;
+    font-weight: 700;
+    transform: rotate(90deg);
+    position: absolute;
+    left: 12.7rem;
+    top: 0.8rem;
+    color: #48556a;
+  }
+  #share-container .share-button {
+    margin-right: 0;
+    left: 27rem;
   }
 }
 
