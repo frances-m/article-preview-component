@@ -82,6 +82,7 @@ main {
   margin: 0 auto;
   border-radius: 1rem;
   background-color: #FFF;
+  box-shadow: 0 3rem 6rem -2rem #9eafc2;
 }
 .card #card-img {
   grid-column: 1;
