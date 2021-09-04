@@ -24,7 +24,6 @@ main {
   margin: 0 auto;
   border-radius: 1rem;
   background-color: #FFF;
-  max-width: 96%;
 
   #card-img {
     grid-column: 1;
@@ -228,6 +227,10 @@ main {
     padding-top: 5vh;
   }
 
+  .card {
+    width: 30rem;
+  }
+
   #card-content {
     margin-left: inherit;
     margin: 0 auto;
@@ -242,8 +245,19 @@ main {
     }
   }
 
-  .share-menu {
-    bottom: 0rem;
+  #card-author {
+    padding-top: 4rem;
+  }
+
+  #share-container {
+    top: -2.5rem;
+    left: -1.5rem;
+    width: 30rem;
+
+    .share-menu {
+      width: 30rem;
+
+    }
   }
 }
 

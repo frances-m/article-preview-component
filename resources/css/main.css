@@ -82,7 +82,6 @@ main {
   margin: 0 auto;
   border-radius: 1rem;
   background-color: #FFF;
-  max-width: 96%;
 }
 .card #card-img {
   grid-column: 1;
@@ -250,6 +249,10 @@ main {
     padding-top: 5vh;
   }
 
+  .card {
+    width: 30rem;
+  }
+
   #card-content {
     margin-left: inherit;
     margin: 0 auto;
@@ -262,8 +265,17 @@ main {
     font-size: 1.1rem;
   }
 
-  .share-menu {
-    bottom: 0rem;
+  #card-author {
+    padding-top: 4rem;
+  }
+
+  #share-container {
+    top: -2.5rem;
+    left: -1.5rem;
+    width: 30rem;
+  }
+  #share-container .share-menu {
+    width: 30rem;
   }
 }
 @media screen and (min-width: 1000px) {
