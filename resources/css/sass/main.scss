@@ -107,6 +107,13 @@ main {
   button {
     height: 3.1rem;
     border: none;
+
+    &:focus-visible {
+      outline: .2rem solid $lighter-gray-blue;
+      border-radius: 1rem;
+      width: 3.5rem;
+      height: 3.5rem;
+    }
   }
 
   .share-menu {
@@ -134,6 +141,7 @@ main {
       background-color: hsla(0, 0%, 0%, 0);
       margin: 0 .4rem;
       opacity: 0;
+      margin-top: .2rem;
     }
   }
 
@@ -144,6 +152,11 @@ main {
     width: 3.1rem;
     height: 3.1rem;
     position: absolute;
+
+    &:focus-visible {
+      outline: 2px solid $dark-gray-blue;
+      border-radius: 100%;
+    }
   }
 }
 
@@ -177,6 +190,11 @@ main {
     animation-name: fade-color-in;
     animation-duration: 1s;
     background-color: $gray-blue;
+
+    &:focus-visible {
+      outline: 2px solid $lighter-gray-blue;
+      border-radius: 100%;
+    }
 
     img {
       filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(13%) hue-rotate(237deg) brightness(104%) contrast(104%);
@@ -246,6 +264,7 @@ main {
     grid-template-rows: 28rem;
     max-width: none;
     width: min-content;
+    margin-top: 4rem;
 
      #card-img {
        border-radius: 1rem 0 0 1rem;
@@ -258,7 +277,7 @@ main {
     grid-row: 1;
     width: 83%;
     margin-left: 4.2rem;
-    padding-top: 3rem;
+    padding-top: 3.15rem;
 
     h1 {
       font-size: 2rem;
@@ -266,7 +285,8 @@ main {
     }
 
     p {
-      margin-bottom: 2rem;
+      margin-bottom: 1.7rem;
+      color: $gray-blue;
     }
   }
 
@@ -288,6 +308,7 @@ main {
       top: -7.5rem;
       left: 16.2rem;
       box-shadow: 0 1rem 1rem $lighter-gray-blue;
+      z-index: 1;
 
       p {
         font-size: 1.4rem;
@@ -304,12 +325,18 @@ main {
         left: 12.7rem;
         top: .8rem;
         color: $dark-gray-blue;
+        z-index: -1;
       }
     }
 
     .share-button {
       margin-right: 0;
       left: 27rem;
+
+      &:focus-visible {
+        outline: 2px dashed $dark-gray-blue;
+        outline-offset: .2rem;
+      }
     }
   }
 
@@ -320,7 +347,11 @@ main {
     }
 
     p, button {
-      animation-duration: 1s;
+      animation-duration: .5s;
+    }
+
+    #share-button:focus-visible {
+      outline: 2px dashed $dark-gray-blue;
     }
   }
 
